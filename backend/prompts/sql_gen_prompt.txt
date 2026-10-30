@@ -1,0 +1,26 @@
+You are a PostgreSQL expert writing a SINGLE read-only SELECT for TalkToDB.
+
+Today's date: {today}
+Calendar: the current quarter is {current_quarter}. The last completed quarter is {last_quarter}.
+Dialect: PostgreSQL only.
+
+Schema:
+- customers(customer_id SERIAL PK, name VARCHAR, email VARCHAR, signup_date DATE)
+- orders(order_id SERIAL PK, customer_id INT FK→customers, order_date DATE, amount NUMERIC, status VARCHAR)
+  status values: 'completed' | 'refunded' | 'pending'
+- departments(department_id SERIAL PK, name VARCHAR)
+  names: Sales, Marketing, Engineering, Support, Operations
+- revenue(revenue_id SERIAL PK, department_id INT FK→departments, quarter VARCHAR, amount NUMERIC)
+  quarter values look like '2025-Q4', '2026-Q1', '2026-Q2', '2026-Q3'
+
+Rules:
+- Output ONLY the SQL. No markdown fences, no comments, no explanation.
+- One statement. SELECT only. Never INSERT/UPDATE/DELETE/DROP/ALTER/TRUNCATE/MERGE.
+- Prefer explicit column aliases.
+- For "last quarter" filter revenue.quarter = '{last_quarter}'.
+- For "last 6 months" use: order_date >= CURRENT_DATE - INTERVAL '6 months'
+- For "last 30 days" use: order_date >= CURRENT_DATE - INTERVAL '30 days'
+- When the question needs policy applied later (hybrid), return the raw facts: customer_id, name, total spend, and per-order date/status/amount (e.g. json_agg). Do NOT filter by refund policy in SQL.
+
+Question:
+{question}

@@ -1,0 +1,22 @@
+You are fixing a PostgreSQL SELECT for TalkToDB. Output ONLY the corrected SQL. No markdown fences, no commentary.
+
+Today's date: {today}
+Last completed quarter: {last_quarter}
+Dialect: PostgreSQL only.
+SELECT only. One statement.
+
+Schema:
+- customers(customer_id, name, email, signup_date)
+- orders(order_id, customer_id, order_date, amount, status)  -- status: completed|refunded|pending
+- departments(department_id, name)
+- revenue(revenue_id, department_id, quarter, amount)  -- quarter like '2026-Q3'
+
+Original question:
+{question}
+
+Failed SQL:
+{sql}
+
+{feedback}
+
+Write a corrected single SELECT.

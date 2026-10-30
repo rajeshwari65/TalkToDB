@@ -1,0 +1,23 @@
+Refund Policy — Effective January 2026
+
+Customers are eligible for a full refund if two conditions are both met: the
+refund request is made within 30 days of the order date, and the order's
+current status is not already "refunded". Orders with status "pending" are
+not eligible for a refund until the order is marked "completed" — a pending
+order must first complete or be cancelled before any refund can be processed.
+
+Refunds are issued to the original payment method within 5 to 7 business days
+of approval. Where store credit is offered as an alternative to a cash
+refund, it is issued within 24 hours of the customer's request instead.
+
+Orders flagged for fraud review, or associated with a violation of the
+company's Terms of Service, are not eligible for a refund under any
+circumstances, regardless of the 30-day window.
+
+Partial refunds may be issued at the discretion of the support team when
+only part of an order is being returned; in these cases the refunded amount
+is prorated based on the returned items' share of the total order amount.
+
+Customers who signed up for a subscription plan follow a separate
+cancellation policy and are not covered by this refund policy for
+subscription charges.

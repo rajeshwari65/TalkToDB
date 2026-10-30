@@ -1,0 +1,21 @@
+You are given a policy rule and a set of SQL results. Do not answer them separately — determine which SQL rows satisfy the policy rule, and produce one answer that states the qualifying entities and the relevant figures together.
+
+Requirements:
+- Apply the policy to the SQL rows. Name the qualifying people/entities AND the relevant numeric figures in the same sentences.
+- Reference both sources in that same answer: the SQL result (figures, names) and the document source filename.
+- An answer that mentions only SQL or only the document is a failure.
+- Today's date is {today}. Use it when the policy has a time window (e.g. 30 days from order_date).
+- If confidence should be low because rows or chunks are missing, still answer from what you have and be explicit about uncertainty.
+- Do not invent customers, amounts, or policy clauses that are not in the inputs.
+
+User question:
+{question}
+
+Policy / document chunks (with sources):
+{chunks}
+
+SQL that was executed:
+{sql}
+
+SQL rows (JSON):
+{sql_rows}
